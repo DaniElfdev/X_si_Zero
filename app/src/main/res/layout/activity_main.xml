@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-
-
     >
 
     <TextView
@@ -16,10 +14,10 @@
         android:text="Player One"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="15dp"
-        android:textSize="20sp"
+        android:textSize="28sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-                />
+        />
 
     <TextView
         android:id="@+id/playerOneScore"
@@ -29,8 +27,43 @@
         android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@id/playerOne"
         app:layout_constraintLeft_toLeftOf="@id/playerOne"
-        android:layout_marginStart=""
+        android:layout_marginLeft="40dp"
+        />
+
+    <TextView
+        android:id="@+id/playerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Two"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:textSize="28sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/playerTwoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/playerTwo"
+        app:layout_constraintRight_toRightOf="@id/playerTwo"
+        android:layout_marginRight="40dp"
+        />
+
+    <TextView
+        android:id="@+id/playerStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="which player is winning"
+        app:layout_constraintTop_toBottomOf="@+id/playerOneScore"
 
 
-            />
+    />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
