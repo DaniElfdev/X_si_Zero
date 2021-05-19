@@ -61,9 +61,18 @@
         android:textAlignment="center"
         android:text="which player is winning"
         app:layout_constraintTop_toBottomOf="@+id/playerOneScore"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+<Button
+    android:id="@+id/btn_0"
+    android:layout_width="135dp"
+    android:layout_height="135dp"
+    android:textSize="60sp"
+    android:text="X"
+    android:textStyle="bold"
+    android:backgroundTint="#B0A52A2A"
 
-
-    />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
