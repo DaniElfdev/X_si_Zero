@@ -11,17 +11,17 @@
         android:id="@+id/playerOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player One"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Jucator 1"
         android:textSize="28sp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/playerOneScore"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="25sp"
@@ -34,7 +34,7 @@
         android:id="@+id/playerTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player Two"
+        android:text="Jucator 2"
         android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"
         android:textSize="28sp"
@@ -65,18 +65,18 @@
         />
 
     <Button
-    android:id="@+id/btn_0"
-    android:layout_width="135dp"
-    android:layout_height="135dp"
-    android:textSize="60sp"
-    android:textStyle="bold"
-    android:backgroundTint="#B0A52A2A"
-    android:textColor="@color/white"
-    app:layout_constraintTop_toBottomOf="@id/playerStatus"
-    app:layout_constraintLeft_toLeftOf="parent"
-    android:layout_marginLeft="3dp"
-    android:layout_marginTop="15dp"
-    />
+        android:id="@+id/btn_0"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#B0A52A2A"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerStatus"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
     android:id="@+id/btn_1"
@@ -160,7 +160,7 @@
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/btn_4"
         app:layout_constraintLeft_toRightOf="@id/btn_6"
-        />
+        />s
 
     <Button
         android:id="@+id/btn_8"
@@ -178,7 +178,7 @@
         android:id="@+id/resetGame"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Reset Game"
+        android:text="Reseteaza Joc"
         android:textColor="@color/white"
         android:backgroundTint="#deffbc47"
         android:textSize="20sp"
