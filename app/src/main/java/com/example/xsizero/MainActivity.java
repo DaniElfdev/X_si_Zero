@@ -52,7 +52,7 @@ import android.widget.TextView;
             activePlayer = true;
 
 
-        }x
+        }
 
         @Override
         public void onClick(View v) {
