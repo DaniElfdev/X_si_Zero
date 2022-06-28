@@ -160,7 +160,7 @@
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/btn_4"
         app:layout_constraintLeft_toRightOf="@id/btn_6"
-        />s
+        />
 
     <Button
         android:id="@+id/btn_8"
