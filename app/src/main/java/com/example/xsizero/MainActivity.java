@@ -8,8 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-    public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+        public class MainActivity extends AppCompatActivity implements View.OnClickListener {
         private TextView playerOneScore, playerTwoScore, playerStatus;
         private Button[] buttons = new Button[9];
         private Button resetGame;
@@ -23,8 +24,8 @@ import android.widget.TextView;
 
         int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
         int[][] winningPositions = {
-                {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, // rows
-                {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, // columns
+                {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, // row
+                {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, // column
                 {0, 4, 8}, {2, 4, 6} // diagonally
         };
 
@@ -73,7 +74,28 @@ import android.widget.TextView;
                 gameState[gameStatePointer] = 1;
             }
             roundCount++;
+            if(checkWinner()){
+                if(activePlayer){
+                    playerOneScoreCount++;
+                    updatePlayerScore();
+                    Toast.makeText(this, "Player One is the Winner!", Toast.LENGTH_SHORT).show();
+                    playAgain();
+                }
+                else {
+                    playerTwoScoreCount++;
+                    updatePlayerScore();
+                    Toast.makeText(this,"Player Two is the Winner!", Toast.LENGTH_SHORT).show();
+                    playAgain();
+                }
 
+            }else if (roundCount == 9){
+                playAgain();
+                Toast.makeText(this,"It's a Tie!", Toast.LENGTH_SHORT).show();
+
+            }
+            else {
+                activePlayer = !activePlayer;
+            }
         }
         public boolean checkWinner(){
             boolean winnerResult = false;
@@ -96,7 +118,7 @@ import android.widget.TextView;
 
             for (int i = 0; i < buttons.length; i++){
              gameState[i] =2;
-
+             buttons[i].setText("");
             }
         }
     }
