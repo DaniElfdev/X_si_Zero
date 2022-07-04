@@ -96,6 +96,24 @@ import android.widget.Toast;
             else {
                 activePlayer = !activePlayer;
             }
+            if(playerOneScoreCount > playerTwoScoreCount){
+                playerStatus.setText("Player One in in the lead!");
+            } else if(playerOneScoreCount < playerTwoScoreCount) {
+                playerStatus.setText("Player Two in in the lead!");
+            } else {
+                playerStatus.setText("The Game is tied!");
+            }
+            resetGame.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    playAgain();
+                    playerOneScoreCount = 0;
+                    playerTwoScoreCount = 0;
+                    playerStatus.setText("");
+                    updatePlayerScore();
+
+                }
+            });
         }
         public boolean checkWinner(){
             boolean winnerResult = false;
