@@ -89,8 +89,7 @@ import android.widget.Toast;
                 }
 
             }else if (roundCount == 9){
-                playAgain();
-                Toast.makeText(this,"It's a Tie!", Toast.LENGTH_SHORT).show();
+                playAgain();            Toast.makeText(this,"It's a Tie!", Toast.LENGTH_SHORT).show();
 
             }
             else {
